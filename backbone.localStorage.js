@@ -6,10 +6,10 @@
  */
 (function (root, factory) {
    if (typeof exports === 'object' && root.require) {
-     module.exports = factory(require("underscore"), require("backbone"));
+     module.exports = factory(require("lodash"), require("backbone"));
    } else if (typeof define === "function" && define.amd) {
       // AMD. Register as an anonymous module.
-      define(["underscore","backbone"], function(_, Backbone) {
+      define(["lodash", "backbone"], function(_, Backbone) {
         // Use global variables if the locals are undefined.
         return factory(_ || root._, Backbone || root.Backbone);
       });
